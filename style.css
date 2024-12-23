@@ -1,22 +1,36 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
 }
 
 #content {
-    padding: 20px;
     margin-top: 50px;
+    padding: 20px;
 }
 
-#miner-notification {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+#miner-controls {
+    margin: 20px;
+}
+
+#miner-controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#miner-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#stats {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
 }
