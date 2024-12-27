@@ -1,36 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    min-height: 100vh;
 }
 
-#content {
-    margin-top: 50px;
+header {
+    width: 100%;
     padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-#miner-controls {
-    margin: 20px;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-#miner-controls button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
+nav {
+    margin-top: 10px;
 }
 
-#miner-controls button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
 }
 
-#stats {
-    margin-top: 20px;
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: auto;
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    display: inline-block;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
