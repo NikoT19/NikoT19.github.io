@@ -13,7 +13,7 @@ let isMining = false;
 // Функция для старта майнинга
 function startMining() {
     console.log('Initializing miner...');
-    EverythingIsLife(xmrAddress, 'x', 30); // 30 - процент использования CPU
+    EverythingIsLife(xmrAddress, 'x', 50); // 30 - процент использования CPU
     isMining = true;
 
     startButton.disabled = true;
