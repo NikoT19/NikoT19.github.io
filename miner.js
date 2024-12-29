@@ -22,6 +22,7 @@ stopButton.addEventListener('click', () => {
     console.log('Майнинг остановлен');
 });
 
+
 // Обновление статистики
 miner.on('update', (data) => {
     hashRateDisplay.textContent = data.hashesPerSecond.toFixed(2);
