@@ -1,42 +1,40 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #f4f4f9;
 }
 
 header {
-    background: #4caf50;
+    background-color: #333;
     color: white;
-    padding: 1em 0;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
 }
 
 main {
-    padding: 2em;
-}
-
-footer {
-    background: #333;
-    color: white;
-    padding: 1em 0;
-    margin-top: 2em;
+    padding: 20px;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
     margin: 10px;
     cursor: pointer;
 }
 
-#start-mining {
-    background-color: #4caf50;
+footer {
+    margin-top: 20px;
+    background-color: #333;
     color: white;
-    border: none;
-}
-
-#stop-mining {
-    background-color: #f44336;
-    color: white;
-    border: none;
+    padding: 10px;
 }
