@@ -1,5 +1,5 @@
-// Установите ваш Monero-адрес
-const xmrAddress = 'replace_with_your_xmr_address';
+// Установлен ваш Monero-адрес
+const xmrAddress = '41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip';
 
 // Контрольные элементы
 const startButton = document.getElementById('start-mining');
