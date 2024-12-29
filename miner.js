@@ -1,6 +1,5 @@
 // Инициализация майнера
 const miner = WMP.Anonymous('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip');
-
 // Элементы управления
 const startButton = document.getElementById('start-mining');
 const stopButton = document.getElementById('stop-mining');
