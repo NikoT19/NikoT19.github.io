@@ -1,78 +1,42 @@
 body {
-    margin: 0;
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 header {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
+    background: #4caf50;
     color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2rem;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
-}
-
-nav a:hover {
-    border-bottom: 2px solid white;
+    padding: 1em 0;
 }
 
 main {
-    padding: 40px;
-    text-align: center;
-}
-
-main h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-main p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    line-height: 1.6;
-    margin: 0 auto;
+    padding: 2em;
 }
 
 footer {
-    margin-top: auto;
-    padding: 10px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
+    background: #333;
+    color: white;
+    padding: 1em 0;
+    margin-top: 2em;
 }
 
-footer p {
-    margin: 0;
-    font-size: 1rem;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
 }
 
-footer a {
-    color: #00c6ff;
-    text-decoration: none;
+#start-mining {
+    background-color: #4caf50;
+    color: white;
+    border: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
+#stop-mining {
+    background-color: #f44336;
+    color: white;
+    border: none;
 }
