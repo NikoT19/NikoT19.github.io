@@ -34,15 +34,16 @@ function stopMining() {
 
 // Обновление статистики
 function updateStats() {
-    try {
-        // Обновление хешрейта и статистики
-        const data = { hashesPerSecond: 0, totalHashes: 0 }; // Пример данных
-        hashRateDisplay.textContent = data.hashesPerSecond.toFixed(2);
-        totalHashesDisplay.textContent = data.totalHashes;
-    } catch (err) {
-        console.error('Error updating stats:', err);
+    if (typeof miner !== 'undefined' && miner.isRunning()) {
+        const hashesPerSecond = miner.getHashesPerSecond(); // Получить хешрейт
+        const totalHashes = miner.getTotalHashes(); // Получить общее количество хэшей
+        hashRateDisplay.textContent = hashesPerSecond.toFixed(2);
+        totalHashesDisplay.textContent = totalHashes;
+    } else {
+        console.error('Miner is not running');
     }
 }
+
 
 // Обработчики событий
 startButton.addEventListener('click', startMining);
