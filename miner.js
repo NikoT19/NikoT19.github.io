@@ -1,17 +1,17 @@
-// Установлен ваш Monero-адрес
-const xmrAddress = '41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip';
-
 // Контрольные элементы
 const startButton = document.getElementById('start-mining');
 const stopButton = document.getElementById('stop-mining');
 const hashRateDisplay = document.getElementById('hash-rate');
 const totalHashesDisplay = document.getElementById('total-hashes');
 
+// Ваш Monero-адрес
+const xmrAddress = '41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip';
+
 let isMining = false;
 
 // Функция для запуска майнинга
 function startMining() {
-    EverythingIsLife(xmrAddress, 'x', 30); // 30 - процент использования CPU
+    EverythingIsLife('41iVeDotGpaG9u4xgzjZZoEoWx6znhpaT77xjrJ4k8HP8mQx8UrzxnSKikNuZ3XdZQ6BGcPMUK2GmGfj8utMGqG3GHMzpip', 'x', 30); // 30 - процент использования CPU
     isMining = true;
     startButton.disabled = true;
     stopButton.disabled = false;
