@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Updating stats...");
         
         if (hashRateElement) {
-            const hashRate = 0; // Замените на ваш расчет hash rate
+            const hashRate = 50; // Замените на ваш расчет hash rate
             hashRateElement.innerText = `Hashrate: ${hashRate.toFixed(2)} H/s`;
 
             if (hashRate === 0) {
